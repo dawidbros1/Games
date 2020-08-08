@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <metart" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style/menu.css">
+        <title>Snake - menu</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="title">Snake</div>
+        <div id="menu">
+
+            <img src="./img/sign.png" id="sign">
+
+            <div id="info">
+                <div id="description">Opis gry: Celem gry jest zdobycie, jak największej liczby punktów zbierając
+                    jabłka. W porównaniu do pospolitego Snake tutaj możemy przechodzić przez ściany, dzięki czemu
+                    pojawimy się po przeciwnej stronie mapy. Gra oferuje również liczne poziomy gry, począwszy od bardzo
+                    łatwego do niemożliwego. Każdy poziom jest coraz trudniejszy, zmniejsza się liczba jabłek na mapie,
+                    a zwiększa liczba przeszkód. Zginąć możemy wyłącznie poprzez zderzenie ze skałą lub stuknięcia we
+                    własny ogon. Powodzenia w grze!</div>
+                <br>
+
+                <div id="keyboard">
+                    <div class="item">Sterowanie:</div>
+                    <div class="item">W A S D - Poruszanie się</div>
+                    <div class="item">SPACJA - Reset mapy</div>
+                    <div class="item">ESC - Menu gry</div>
+                </div>
+
+            </div>
+
+            <form>
+                <fieldset>
+                    <legend>Levels</legend>
+
+                    <p>
+                        <input type="radio" name="level" id="very-easy" value="very-easy">
+                        <label for="very-easy">Very easy</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="level" id="easy" value="easy">
+                        <label for="easy">Easy</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="level" id="medium" value="medium" checked>
+                        <label for="medium">Medium</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="level" id="hard" value="hard">
+                        <label for="hard">Hard</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="level" id="very" value="very-hard">
+                        <label for="very">Very hard</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="level" id="nightmare" value="nightmare">
+                        <label for="nightmare">Nightmare</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="level" id="hell" value="hell">
+                        <label for="hell">Hell</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="level" id="impossible" value="impossible">
+                        <label for="impossible">Impossible</label>
+                    </p>
+
+
+                    <button type="button" id="button">Play</button>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        var button = document.getElementById('button');
+        var level = '';
+
+        button.addEventListener('click', function () {
+            var radios = document.getElementsByTagName('input');
+
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    level = radios[i].value;
+                }
+            }
+
+            localStorage.setItem('level', level);
+            location.href = "./game.html";
+        })
+
+    </script>
+
+</body>
+
+</html>

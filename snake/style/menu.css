@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+  }
+
+body{
+    background: url('./../img/bgi-menu.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#container{
+    width: 400px;
+    height: auto;
+    background-color: lightgreen;
+    border: 1px solid black;
+    margin: 10px auto 0;
+    position: relative;
+}
+
+form{
+    width: 90%;
+    margin: 0 auto 0;
+}
+
+fieldset{
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+fieldset > p{
+    text-align: center;
+    font-size: 40px;   
+}
+
+input[type=radio]{
+    width: 20px;
+    height: 20px;
+}
+
+#title{
+    font-size: 58px;
+    text-align: center;
+}   
+
+legend{
+    padding: 5px;
+    box-sizing: border-box; 
+    font-size: 22px;
+}
+
+#sign{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+#sign:hover{
+    cursor: help;
+}
+
+#sign:hover + #info{
+    opacity: 1;
+}
+
+img{
+    width: 45px;
+    height: 64px;
+}
+
+#info{
+    opacity: 0;
+    position: absolute;
+    right: -520px;
+    top: 0;
+    width: 500px;
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 5px;
+    transition: opacity 1s;
+}
+
+.item{
+    display: block; 
+}
+
+button{
+    text-align: center;
+    display:block;
+    font-size: 27px;
+    width: 163px;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    transition: all 0.5s;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px black;
+    margin-top: 15px;
+    margin: 15px auto 0px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: lightcoral;
+}
+
+form{
+    padding-bottom: 15px;
+}
